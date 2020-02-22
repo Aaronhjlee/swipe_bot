@@ -53,7 +53,7 @@ class TinderBot():
         dislike_btn.click()
 
     def match_popup(self):
-        m_btn = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div[2]/button[2]/span')
+        m_btn = self.driver.find_element_by_xpath('//*[@id="modal-manager-canvas"]/div/div/div[1]/div/div[3]/a')
         m_btn.click()
 
     def homescreen_popup(self):
@@ -67,6 +67,7 @@ class TinderBot():
     def auto_swipe(self):
         count = 0
         matches = 0
+        popup = 0
         while True:
             sleep(1)
             try:
@@ -81,13 +82,18 @@ class TinderBot():
                 except Exception:
                     try:
                         self.homescreen_popup()
-                        matches += 1
-                        print ('---> Match Counter: {} <---'.format(matches))
                     except Exception:
-                        self.plus_popup()
-                        count -= 1
+                        try:
+                            self.match_popup()
+                            matches += 1
+                            print ('---> Match Counter: {} <---'.format(matches))
+                        except Exception:
+                            self.plus_popup()
+                            count -= 1
+                            popup += 1
+                            if popup == 3:
+                                self.auto_message()
 
-    
 
     def send_messages(self):
         match_btn = self.driver.find_element_by_xpath('//*[@id="matchListNoMessages"]/div[1]/div[2]/a/div[1]')
@@ -104,7 +110,6 @@ class TinderBot():
         mt_btn = self.driver.find_element_by_xpath('//*[@id="match-tab"]')
         mt_btn.click()
 
-
     # automatically messages people
     def auto_message(self):
         sent = 0
@@ -113,6 +118,7 @@ class TinderBot():
             try:
                 self.match_tab()
                 self.send_messages()
+                sleep(0.5)
                 sent += 1
                 print ('Messages sent: {}'.format(sent))
             except Exception:
@@ -122,5 +128,5 @@ class TinderBot():
 bot = TinderBot()
 bot.login()
 sleep(7)
-bot.auto_swipe()
-bot.auto_message()
+# bot.auto_swipe()
+# bot.auto_message()
