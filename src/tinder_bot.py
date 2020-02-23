@@ -65,35 +65,27 @@ class TinderBot():
         plus_popup.click()
 
     def auto_swipe(self):
-        count = 0
-        matches = 0
-        popup = 0
-        while True:
+        count, matches = 0, 0
+        stopper = int(input('How many swipes do we stop at? '))
+        while count != stopper:
             sleep(1)
             try:
                 self.like()
                 count += 1
                 print ('Like Counter: {} |  Match Counter: {}'.format(count, matches))
+                if count == stopper:
+                    self.auto_message()
             except Exception:
                 sleep (0.5)
                 try:
                     self.homescreen_popup()
-
                 except Exception:
                     try:
-                        self.homescreen_popup()
+                        self.match_popup()
+                        matches += 1
+                        print ('---> Match Counter: {} <---'.format(matches))
                     except Exception:
-                        try:
-                            self.match_popup()
-                            matches += 1
-                            print ('---> Match Counter: {} <---'.format(matches))
-                        except Exception:
-                            self.plus_popup()
-                            count -= 1
-                            popup += 1
-                            if popup == 3:
-                                self.auto_message()
-
+                        pass                    
 
     def send_messages(self):
         match_btn = self.driver.find_element_by_xpath('//*[@id="matchListNoMessages"]/div[1]/div[2]/a/div[1]')
@@ -110,15 +102,19 @@ class TinderBot():
         mt_btn = self.driver.find_element_by_xpath('//*[@id="match-tab"]')
         mt_btn.click()
 
+    def close_tab(self):
+        close_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div/div[1]/div/div/div[1]/a/button')
+        close_btn.click()
+
     # automatically messages people
     def auto_message(self):
         sent = 0
         while True:
-            sleep(0.5)
+            sleep(1)
             try:
                 self.match_tab()
                 self.send_messages()
-                sleep(0.5)
+                sleep(1)
                 sent += 1
                 print ('Messages sent: {}'.format(sent))
             except Exception:
