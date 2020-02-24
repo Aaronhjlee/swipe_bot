@@ -50,6 +50,10 @@ class BumbleBot():
         dislike_btn = self.driver.find_element_by_xpath('//*[@id="main"]/div/div[1]/main/div[2]/div/div/span/div[2]/div/div[2]/div/div[1]/div/span/span')
         dislike_btn.click()
 
+    def boom_popup(self):
+        boom_popup = self.driver.find_element_by_xpath('//*[@id="main"]/div/div[1]/main/div[2]/article/div/footer/div/div[2]/div/span/span/span')
+        boom_popup.click()
+
     def auto_swipe(self):
         count = 0
         matches = 0
@@ -68,11 +72,21 @@ class BumbleBot():
                 except Exception:
                     pass
 
-    def boom_popup(self):
-        boom_popup = self.driver.find_element_by_xpath('//*[@id="main"]/div/div[1]/main/div[2]/article/div/footer/div/div[2]/div/span/span/span')
-        boom_popup.click()
+    def send_message(self, id):
+        icon_btn = self.driver.find_element_by_xpath('//*[@id="main"]/div/div[1]/aside[1]/div/div[3]/div/div/section[1]/div/section/section/div[1]/ul/li[{}]/div/div'.format(id))
+        icon_btn.click()
+
+        message_in = self.driver.find_element_by_xpath('//*[@id="main"]/div/div[1]/main/div[3]/div/div[1]/div/div/textarea[1]')
+        message_in.send_keys('Hi, my name is Aaron and I am looking for job opportunities in the area of data science, data analyst, business analyst, etc. I have experience in SQL, Python, Statistics, and Data Visualizations. Hoping to hear from you soon!')
+        
+        send_btn = self.driver.find_element_by_xpath('//*[@id="main"]/div/div[1]/main/div[3]/div/div[3]/div/span/span/span')
+        send_btn.click()
 
 bot = BumbleBot()
 bot.login()
 sleep(4)
-bot.auto_swipe()
+# bot.auto_swipe()
+
+//*[@id="main"]/div/div[1]/aside/div/div[3]/div/div/section[1]/div/section/section/div[1]/ul/li[2]/div/div
+//*[@id="main"]/div/div[1]/aside[1]/div/div[3]/div/div/section[1]/div/section/section/div[1]/ul/li[3]/div/div
+//*[@id="main"]/div/div[1]/aside[1]/div/div[3]/div/div/section[1]/div/section/section/div[1]/ul/li[4]/div/div
