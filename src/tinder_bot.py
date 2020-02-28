@@ -13,8 +13,8 @@ class TinderBot():
 
         sleep(5)
 
-        fb_btn = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div/div/div[3]/div[2]/button')
-        fb_btn.click()                              
+        fb_btn = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div/div/div[3]/span/div[2]/button')
+        fb_btn.click()
 
         # switch to login popup
         base_window = self.driver.window_handles[0]
@@ -45,11 +45,11 @@ class TinderBot():
         notif_popup.click()
 
     def like(self):
-        like_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/button[3]')
+        like_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[4]/button')
         like_btn.click()
 
     def dislike(self):
-        dislike_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/button[1]')
+        dislike_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[2]/button')
         dislike_btn.click()
 
     def match_popup(self):
@@ -91,9 +91,13 @@ class TinderBot():
         match_btn = self.driver.find_element_by_xpath('//*[@id="matchListNoMessages"]/div[1]/div[2]/a/div[1]')
         match_btn.click()
 
+        sleep(1)
+
         # You can change the message to say whatever you want
         message_in = self.driver.find_element_by_xpath('//*[@id="chat-text-area"]')
         message_in.send_keys('I was told to expand my job search, so I did. Hi Im Aaron!')
+
+        sleep(1)
 
         send_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div/div[1]/div/div/div[3]/form/button/span')
         send_btn.click()
@@ -114,7 +118,6 @@ class TinderBot():
             try:
                 self.match_tab()
                 self.send_messages()
-                sleep(1)
                 sent += 1
                 print ('Messages sent: {}'.format(sent))
             except Exception:
@@ -123,6 +126,6 @@ class TinderBot():
 
 bot = TinderBot()
 bot.login()
-sleep(7)
+sleep(5)
 # bot.auto_swipe()
 # bot.auto_message()
