@@ -1,8 +1,9 @@
 from selenium import webdriver
 import sys
 sys.path.append('/Users/AaronLee/Documents/GitHub/creds')
-from login_info import username, password
+# from login_info import username, password
 from time import sleep
+from login_eric import username, password
 
 class TinderBot():
     def __init__(self):
@@ -67,14 +68,16 @@ class TinderBot():
     def auto_swipe(self):
         count, matches = 0, 0
         stopper = int(input('How many swipes do we stop at? '))
+        message = int(input('Message people after? '))
         while count != stopper:
             sleep(1)
             try:
                 self.like()
                 count += 1
                 print ('Like Counter: {} |  Match Counter: {}'.format(count, matches))
-                if count == stopper:
-                    self.auto_message()
+                if message == 1:
+                    if count == stopper:
+                        self.auto_message()
             except Exception:
                 sleep (0.5)
                 try:
