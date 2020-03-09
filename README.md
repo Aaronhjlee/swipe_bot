@@ -1,7 +1,7 @@
-![](images/gram_banner.png)
+<!-- ![](images/gram_banner.png) -->
 
-# Facial_Feature_Predictor
-**Using headshots to predict gender and attractiveness**
+# Swipe Bot
+**Using dating apps to find a job**
 <br>Aaron Lee
 <br>
 [Linkedin](http://www.linkedin.com/in/aaronhjlee)  |  [Github](https://github.com/aaronhjlee)   |   aaronhjlee1@gmail.com
@@ -9,13 +9,9 @@
 ## Table of Contents
 
 * [Motivation](#motivation)
-  * [Personal](#personal)
   * [Question](#question)
+* [Set Up](#set-up)
 * [Strategy](#strategy)
-* [Exploratory Data Analysis](#exploratory-data-analysis)
-* [Feature Engineering](#feature-engineering)
-* [Deep Learning](#deep-learning)
-* [Trasfer Learning](#transfer-learning)
 * [Conclusion](#conclusion)
 * [Future Analysis](#future-analysis)
 * [Tools Used](#tools-used)
@@ -24,15 +20,18 @@
 
 ## Motivation
 
-Photography has been a hobby of mine for the past 7 years and inparticular, portrait photography. There are a lot of aspects to consider when taking a good picture. When I was starting out, one of my first paid gigs was to do headshots of lawyers. I would tell them to angle their shoulders one way, tilt their chin another, rest their eyes before the moment, etc. I know for a fact, my first time was not my best work, and very far from it. Like how I would not blame my camera for taking a bad photo, I would never blame my subject for making the photo turn out 'undesireable'. I knew there was a way to make **anyone** look good in front of the camera, it was all about perspective. 
+In short, I was fed up with how the job application process was going. I was a former educator in the inner-city of San Francisco teaching primary grades for the past 2 years and was looking to make a switch into tech. I always had a passion for data and analytics which naturally led me to do a bootcamp in Data Science with Galvanize. Why a bootcamp? I thought the skills I needed to land a job in data science / data analytics could be learned at the bootcamp which would be sufficient as base point to get my *first job* in tech. Yes and no. With over 400+ job applications sent out, ~30 of those being referrals, 75+ rejections, and ~17 callbacks, I decided to embark on a project that would *expand my job search* beyond my normal friend circle. 
 
-### Personal
-
-So why did I choose to analyze headshots from a dataset of celebrities? It was an easy way to collect data and to start building a model on people, who by in large, deemed attractive. By having a computer take inventory on the myriad of features that come with an individual's face, there would be an unbiased metric of parsing which facial features mattered in determining an individual's picture was attractive or not.
+I have heard of people using Linkedin to randomly message users to solicit a date, most definitely creepy and unprofessional to say the least. In the spirit of going counter culture to something that isn't really Linkedin culture, I decided to use python to build a bot to make connections on a dating platform to increase my circle of possibility. 
 
 ### Question
 
-What facial features determine an attractive headshot?
+Could I get ANY referrals from dating platforms?
+Would this be worth my time?
+
+## Set Up
+
+1. 
 
 ## Strategy
 
