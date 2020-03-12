@@ -35,6 +35,26 @@ Would this be worth my time?
 2. Install Selenium
   - Open up your terminal
   - Type the following: `pip install selenium`
+3. Create credentials to login to Tinder
+  - Open up a new .py file in code editor
+  - 
+  - save as `login_info.py`
+4. Fork the repo and open up `tinder_bot.py` in a code editor such as VSC, Sublime, etc. and change the following:
+  - In line 3, in the parenthesis of `sys.path.append('/Users/AaronLee/Documents/GitHub/creds')`, change to the file path with your login_info
+  - In line 9, in the parenthesis of `self.driver = webdriver.Chrome('/Users/AaronLee/Documents/GitHub/chromedriver')`, change the file path to of Chromedriver from step 1
+5. Run the script
+  - Runs the .py file in an interactive environment, allowing you to call on functions
+    * `python -i tinder_bot.py`
+  - After login, this automatically swipes right on every individual
+    * `bot.auto_swipe()`
+    * specify how many right swipes you want during this session
+    * 0 is for no messaging after the swipes finish
+    * 1 is for messaging the matches afterwards
+  - To only messages your matches
+    * `bot.auto_message()`
+  - To quit
+    * control + c
+    * `exit()`
 
 ## Results
 
@@ -50,6 +70,14 @@ Soley from Tinder, here are the numbers from 2.5 weeks:
   * 350+ matches
   * 7 job referrals
   * 0 dates
+
+## Future Analysis
+
+Moving forward, you could filter for the text, age, description, distance, etc. in order to optimize the people you match with. For example, if you have collected enough data on the potential swipes and matches, you would be able to get a picture of a certain type of person who is more likely to match with you. Additionally, you could run each image of the individuals through a Convolutional Neural Network (CNN) in order to swipe right only on individuals who are deemed 'attractive' by the machine. 
+
+## References
+
+* https://www.youtube.com/watch?v=lvFAuUcowT4&t=3s
 
 ## Contact Information
 Aaron Lee is a Customer Solutions Engineer / Data Scientist with a background in education and portrait/landscape photography. His interests other than data science include music, photography, backpacking, basketball, and running.

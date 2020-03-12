@@ -3,7 +3,6 @@ import sys
 sys.path.append('/Users/AaronLee/Documents/GitHub/creds')
 from login_info import username, password
 from time import sleep
-# from login_eric import username, password
 
 class TinderBot():
     def __init__(self):
