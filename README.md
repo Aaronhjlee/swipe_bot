@@ -11,10 +11,8 @@
 * [Motivation](#motivation)
   * [Question](#question)
 * [Set Up](#set-up)
-* [Strategy](#strategy)
-* [Conclusion](#conclusion)
+* [Results](#results)
 * [Future Analysis](#future-analysis)
-* [Tools Used](#tools-used)
 * [References](#references)
 * [Contact](#contact-information)
 
@@ -31,20 +29,33 @@ Would this be worth my time?
 
 ## Set Up
 
-1. 
+1. Install Chromedriver
+  - https://chromedriver.storage.googleapis.com/index.html?path=80.0.3987.106/
+  - Download, unzip, and put Chromedriver in a destination where you know the file path. For me it was '/Users/AaronLee/Documents/GitHub/chromedriver' (important later)
+2. Install Selenium
+  - Open up your terminal
+  - Type the following: 'pip install selenium'
 
-## Strategy
+## Results
 
-#### 1. Load and Clean Data
-* Resize
-* Normalize
-#### 2. Exploratory Data Analysis
-#### 3. Machine Learning Models
-* Random Forest
-* Gradient Boosting
-* Feature Importance
-#### 4. Convolutional Neural Network
-* Determine male / female
-* Predict probability of attractiveness based on facial features
-#### 5. Feature Importance 
-* Extract the filters to determine which features are important
+Over the course of my job search, in 3.5 months, I've applied to:
+  ~400 companies
+  81 rejections
+  18 call-backs
+  5 onsites
+  3 offers
+
+Soley from Tinder, here are the numbers from 2.5 weeks:
+  ~5000 right swipes
+  350+ matches
+  7 job referrals
+  0 dates
+
+## Contact Information
+Aaron Lee is a Customer Solutions Engineer / Data Scientist with a background in education and portrait/landscape photography. His interests other than data science include music, photography, backpacking, basketball, and running.
+
+* Linkedin: [in/aaronhjlee](https://www.linkedin.com/in/aaronhjlee/)
+* Github: [/aaronhjlee](https://github.com/Aaronhjlee)
+* Email: [aaronhjlee1@gmail.com](aaronhjlee1@gmail.com)
+
+Copyright © 2020 Aaron Lee
