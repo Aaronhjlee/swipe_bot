@@ -1,4 +1,4 @@
-![](images/tinder_banner.jpg)
+![](images/tinder_banner.png)
 
 # Swipe Bot
 **Using dating apps to find a job**
