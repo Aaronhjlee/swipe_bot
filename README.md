@@ -39,17 +39,17 @@ Would this be worth my time?
 ## Results
 
 Over the course of my job search, in 3.5 months, I've applied to:
-  ~400 companies
-  81 rejections
-  18 call-backs
-  5 onsites
-  3 offers
+  * ~400 companies
+  * 81 rejections
+  * 18 call-backs
+  * 5 onsites
+  * 3 offers
 
 Soley from Tinder, here are the numbers from 2.5 weeks:
-  ~5000 right swipes
-  350+ matches
-  7 job referrals
-  0 dates
+  * ~5000 right swipes
+  * 350+ matches
+  * 7 job referrals
+  * 0 dates
 
 ## Contact Information
 Aaron Lee is a Customer Solutions Engineer / Data Scientist with a background in education and portrait/landscape photography. His interests other than data science include music, photography, backpacking, basketball, and running.
