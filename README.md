@@ -31,10 +31,10 @@ Would this be worth my time?
 
 1. Install Chromedriver
   - https://chromedriver.storage.googleapis.com/index.html?path=80.0.3987.106/
-  - Download, unzip, and put Chromedriver in a destination where you know the file path. For me it was '/Users/AaronLee/Documents/GitHub/chromedriver' (important later)
+  - Download, unzip, and put Chromedriver in a destination where you know the file path. For me it was `/Users/AaronLee/Documents/GitHub/chromedriver` (important later)
 2. Install Selenium
   - Open up your terminal
-  - Type the following: 'pip install selenium'
+  - Type the following: `pip install selenium`
 
 ## Results
 
