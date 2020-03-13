@@ -37,10 +37,12 @@ Would this be worth my time?
   - Type the following: `pip install selenium`
 3. Create credentials to login to Tinder
   - Open up a new .py file in code editor
-  - 
-  - save as `login_info.py`
+  - Populate with username and password
+    * `username = your_user_name`
+    * `password = password123`
+  - save as `login_info.py` in a seperate folder
 4. Fork the repo and open up `tinder_bot.py` in a code editor such as VSC, Sublime, etc. and change the following:
-  - In line 3, in the parenthesis of `sys.path.append('/Users/AaronLee/Documents/GitHub/creds')`, change to the file path with your login_info
+  - In line 3, in the parenthesis of `sys.path.append('/Users/AaronLee/Documents/GitHub/creds')`, change to the file path with your login_info from step 3
   - In line 9, in the parenthesis of `self.driver = webdriver.Chrome('/Users/AaronLee/Documents/GitHub/chromedriver')`, change the file path to of Chromedriver from step 1
 5. Run the script
   - Runs the .py file in an interactive environment, allowing you to call on functions
